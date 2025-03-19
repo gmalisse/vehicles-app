@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<Shell
+    x:Class="VehiclesApp.AppShell"
+    xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+    xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+    xmlns:pages="clr-namespace:VehiclesApp.Pages"
+    Title="VehiclesApp">
+
+    <TabBar>
+        <Tab Title="Home"
+             Icon="home.png">
+            <ShellContent ContentTemplate="{DataTemplate pages:MainPage}"/>
+        </Tab>
+        <Tab Title="Marcas"
+             Icon="marcas.png">
+            <ShellContent ContentTemplate="{DataTemplate pages:BrandMain}"/>
+        </Tab>
+        <Tab Title="Veículos"
+             Icon="veiculos.png">
+            <ShellContent ContentTemplate="{DataTemplate pages:VehicleMain}"/>
+        </Tab>
+        <Tab Title="Modelos"
+            Icon="modelos.png">
+            <ShellContent ContentTemplate="{DataTemplate pages:ModelMain}"/>
+        </Tab>
+        <Tab Title="Sobre"
+             Icon="sobre.png">
+            <ShellContent ContentTemplate="{DataTemplate pages:About}"/>
+        </Tab>
+    </TabBar>
+</Shell>

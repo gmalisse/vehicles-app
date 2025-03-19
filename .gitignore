@@ -1,0 +1,50 @@
+# Build artifacts
+bin/
+obj/
+
+# User-specific files
+*.user
+*.suo
+*.userosscache
+*.sln.docstates
+
+# Visual Studio Code settings
+.vscode/
+
+# macOS and Linux specific files
+.DS_Store
+*.swp
+
+# Xamarin/MAUI specific files
+*.vs/
+**/*.apk
+**/*.aab
+**/*.keystore
+**/*.db
+**/*.sqlite
+**/*.pdb
+**/*.log
+**/*.lock
+**/*.bak
+
+# Generated Packages
+Packages/
+*.nupkg
+*.snupkg
+
+# Configuration and secrets
+appsettings.json
+appsettings.*.json
+secrets.json
+
+# JetBrains Rider project settings
+.idea/
+
+# Windows-specific files
+Thumbs.db
+Desktop.ini
+
+# Node.js related (if using for frontend assets)
+node_modules/
+yarn.lock
+package-lock.json
