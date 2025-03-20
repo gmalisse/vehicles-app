@@ -3,10 +3,36 @@
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
              x:Class="VehiclesApp.Pages.ModelMain"
              Title="Modelos">
-    <VerticalStackLayout>
-        <Label 
-            Text="Modelos"
-            VerticalOptions="Center" 
-            HorizontalOptions="Center" />
-    </VerticalStackLayout>
+    <Grid
+    Padding="30"
+    ColumnSpacing="10">
+        <Grid.RowDefinitions>
+            <RowDefinition Height="auto"/>
+        </Grid.RowDefinitions>
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="*"/>
+            <ColumnDefinition Width="auto"/>
+        </Grid.ColumnDefinitions>
+        
+        <Entry
+            x:Name="etrBuscar"
+            Placeholder="Buscar"
+            FontSize="19"
+            TextColor="Black"
+            BackgroundColor="White"
+            Grid.Row="0"
+            Grid.Column="0"/>
+
+        <Button
+            x:Name="btnAdd"
+            Text="+"
+            FontAttributes="Bold"
+            FontSize="Title"
+            HeightRequest="55"
+            WidthRequest="55"
+            CornerRadius="50"
+            Clicked="BtnAddModel"
+            Grid.Row="0"
+            Grid.Column="1"/>
+    </Grid>
 </ContentPage>

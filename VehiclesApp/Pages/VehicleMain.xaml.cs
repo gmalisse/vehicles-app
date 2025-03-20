@@ -6,4 +6,9 @@ public partial class VehicleMain : ContentPage
 	{
 		InitializeComponent();
 	}
+
+    private async void BtnAddVehicle(object sender, EventArgs e)
+    {
+        await Navigation.PushAsync(new VehicleCreate());
+    }
 }

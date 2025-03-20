@@ -6,4 +6,9 @@ public partial class BrandMain : ContentPage
 	{
 		InitializeComponent();
 	}
+
+	private async void BtnAddBrand(object sender, EventArgs e)
+	{
+		await Navigation.PushAsync(new BrandCreate());
+	}
 }
