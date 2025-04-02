@@ -3,36 +3,63 @@
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
              x:Class="VehiclesApp.Pages.ModelMain"
              Title="Modelos">
-    <Grid
-    Padding="30"
-    ColumnSpacing="10">
-        <Grid.RowDefinitions>
-            <RowDefinition Height="auto"/>
-        </Grid.RowDefinitions>
-        <Grid.ColumnDefinitions>
-            <ColumnDefinition Width="*"/>
-            <ColumnDefinition Width="auto"/>
-        </Grid.ColumnDefinitions>
+    <VerticalStackLayout>
+        <Grid
+            Padding="30"
+            ColumnSpacing="10">
+            <Grid.RowDefinitions>
+                <RowDefinition Height="auto"/>
+            </Grid.RowDefinitions>
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition Width="*"/>
+                <ColumnDefinition Width="auto"/>
+            </Grid.ColumnDefinitions>
         
-        <Entry
-            x:Name="etrBuscar"
-            Placeholder="Buscar"
-            FontSize="19"
-            TextColor="Black"
-            BackgroundColor="White"
-            Grid.Row="0"
-            Grid.Column="0"/>
+            <Entry
+                x:Name="etrBuscar"
+                Placeholder="Buscar"
+                PlaceholderColor="LightGray"
+                FontSize="Small"
+                VerticalOptions="Center"
+                TextColor="Black"
+                BackgroundColor="White"
+                Grid.Row="0"
+                Grid.Column="0"/>
 
-        <Button
-            x:Name="btnAdd"
-            Text="+"
-            FontAttributes="Bold"
-            FontSize="Title"
-            HeightRequest="55"
-            WidthRequest="55"
-            CornerRadius="50"
-            Clicked="BtnAddModel"
-            Grid.Row="0"
-            Grid.Column="1"/>
-    </Grid>
+            <Button
+                x:Name="btnAdd"
+                Text="+"
+                FontAttributes="Bold"
+                FontSize="Title"
+                HeightRequest="55"
+                WidthRequest="55"
+                CornerRadius="50"
+                Clicked="BtnAddModel"
+                Grid.Row="0"
+                Grid.Column="1"/>
+        </Grid>
+        <HorizontalStackLayout
+            Padding="25"
+            Spacing="30"
+            HorizontalOptions="Center"
+            BackgroundColor="Gray">
+        
+            <Label
+                x:Name="lblTeste"
+                Text="Item 1"
+                VerticalOptions="Center"/>
+
+            <ImageButton
+                x:Name="imgPencil"
+                Source="pencil.png"
+                Clicked="BtnUpdateModel"
+                HeightRequest="35"/>
+
+            <ImageButton
+                x:Name="imgTrash"
+                Source="trash.png"
+                Clicked="BtnDeleteModel"
+                HeightRequest="35"/>
+        </HorizontalStackLayout>
+    </VerticalStackLayout>
 </ContentPage>

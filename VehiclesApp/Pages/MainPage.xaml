@@ -4,28 +4,29 @@
              x:Class="VehiclesApp.Pages.MainPage"
              Title="Home">
     <VerticalStackLayout
-        Spacing="-90">
+        Spacing="-68">
         <Image
             x:Name="imgCar"
-            Source="home_car"
-            HeightRequest="255"
+            Source="electric_car"
+            HeightRequest="280"
             HorizontalOptions="Center"
             VerticalOptions="Center"/>
 
         <Label
             x:Name="lblAppName"
-            Text="VehicleApp"
+            Text="vehicleApp"
             HorizontalOptions="Center"
-            FontSize="50"/>
+            FontSize="54"/>
 
         <VerticalStackLayout
-            Padding="110">
+            Padding="70">
             <Entry
                 x:Name="etrBuscar"
                 Placeholder="Buscar"
-                FontSize="19"
+                PlaceholderColor="LightGray"
+                FontSize="Medium"
                 TextColor="Black"
-                WidthRequest="270"
+                WidthRequest="320"
                 BackgroundColor="White"/>
         </VerticalStackLayout>
     </VerticalStackLayout>

@@ -2,11 +2,79 @@
 <ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
              x:Class="VehiclesApp.Pages.ModelUpdate"
-             Title="ModelUpdate">
-    <VerticalStackLayout>
-        <Label 
-            Text="Welcome to .NET MAUI!"
-            VerticalOptions="Center" 
-            HorizontalOptions="Center" />
+             Title="Modelos">
+    <VerticalStackLayout
+        Padding="0"
+        Spacing="30">
+
+        <Grid
+            Padding="20"
+            ColumnSpacing="15"
+            RowSpacing="15">
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition Width="0.3*"/>
+                <ColumnDefinition/>
+            </Grid.ColumnDefinitions>
+            <Grid.RowDefinitions>
+                <RowDefinition/>
+                <RowDefinition/>
+                <RowDefinition/>
+            </Grid.RowDefinitions>
+
+            <Label 
+                Text="EDITAR MODELO"
+                HorizontalOptions="Center" 
+                FontSize="Title"
+                Grid.ColumnSpan="2"/>
+
+            <Entry
+                x:Name="etrId"
+                Text="ID"
+                FontSize="Small"
+                IsEnabled="False"
+                BackgroundColor="LightGray"
+                Grid.Row="1"
+                Grid.Column="0"/>
+
+            <Entry
+                x:Name="etrName"
+                Placeholder="Nome"
+                PlaceholderColor="LightGray"
+                FontSize="Small"
+                TextColor="Black"
+                BackgroundColor="White"
+                Grid.Row="1"
+                Grid.Column="1"/>
+
+            <Editor 
+                x:Name="editorObs"
+                Placeholder="Observação"
+                PlaceholderColor="LightGray"
+                FontSize="Small"
+                TextColor="Black"
+                BackgroundColor="White"
+                HeightRequest="150"
+                Grid.Row="2"
+                Grid.ColumnSpan="2"/>
+        </Grid>
+
+        <HorizontalStackLayout
+            Spacing="15"
+            HorizontalOptions="CenterAndExpand">
+            <Button
+                x:Name="btnClear"
+                Text="Limpar"
+                FontAttributes="Bold"
+                FontSize="Small"
+                Clicked="BtnClear"
+                HorizontalOptions="CenterAndExpand"/>
+
+            <Button
+                x:Name="btnAdd"
+                Text="Adicionar"
+                FontAttributes="Bold"
+                FontSize="Small"
+                HorizontalOptions="CenterAndExpand"/>
+        </HorizontalStackLayout>
     </VerticalStackLayout>
 </ContentPage>

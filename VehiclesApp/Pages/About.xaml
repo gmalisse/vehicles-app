@@ -3,10 +3,95 @@
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
              x:Class="VehiclesApp.Pages.About"
              Title="Sobre">
-    <VerticalStackLayout>
+    <VerticalStackLayout
+    Padding="20"
+    Spacing="30">
         <Label 
-            Text="Sobre"
-            VerticalOptions="Center" 
-            HorizontalOptions="Center" />
+        x:Name="lblApp"
+        Text="VehiclesApp"
+        HorizontalOptions="Center"
+        FontAttributes="Bold"
+        FontSize="Large"/>
+
+        <VerticalStackLayout
+        Spacing="15">
+
+
+            <Label
+            x:Name="lblInfo"
+            Text="Um sistema prático para cadastro de veículos!"
+            HorizontalOptions="Center"/>
+
+            <Label
+            x:Name="lblVersion"
+            Text="Versão: 1.0.0"
+            HorizontalOptions="Center"/>
+
+            <Label
+            x:Name="lblTech"
+            Text="Tecnologia utilizada: .NET MAUI"
+            HorizontalOptions="Center"
+            FontAttributes="Bold"
+            TextColor="Purple"/>
+
+            <Image
+            Source="gustavo.png"
+            HeightRequest="150"
+            HorizontalOptions="Center"/>
+
+            <Label
+            x:Name="lblName"
+            Text="Desenvolvido por: Gustavo Rocha Malisse"
+            HorizontalOptions="Center"/>
+
+            <Label
+            x:Name="lblObj"
+            Text="Futuro desenvolvedor Backend"
+            HorizontalOptions="Center"/>
+
+            <Label
+            x:Name="lblRa"
+            Text="RA: 2401852"/>
+
+            <Label 
+            x:Name="lblCourse"
+            Text="Curso: Ciência da Computação"/>
+
+            <Label 
+            x:Name="lblSemester"
+            Text="Período: 3 / Noturno"/>
+
+            <Label 
+            x:Name="lblDiscipline"
+            Text="Disciplina: Desenvolvimento Mobile Android"/>
+
+            <BoxView 
+            HeightRequest="1" 
+            BackgroundColor="Gray"/>
+
+            <Label
+            x:Name="lblContato"
+            Text="CONTATO:"
+            HorizontalOptions="Center"
+            FontSize="Medium"/>
+
+            <HorizontalStackLayout
+            HorizontalOptions="Center"
+            Spacing="-15">
+                <ImageButton
+                x:Name="imgLinkedin"
+                Source="linkedin.png"
+                Clicked="btnRedirecionarLinkedin"
+                HeightRequest="50"/>
+
+                <ImageButton
+                x:Name="imgGithub"
+                Source="github.png"
+                Clicked="btnRedirecionarGithub"
+                HeightRequest="50"/>
+            </HorizontalStackLayout>
+
+        </VerticalStackLayout>
+
     </VerticalStackLayout>
 </ContentPage>

@@ -6,4 +6,10 @@ public partial class ModelCreate : ContentPage
 	{
 		InitializeComponent();
 	}
+
+    public void BtnClear(object sender, EventArgs e)
+    {
+        etrName.Text = "";
+        editorObs.Text = "";
+    }
 }

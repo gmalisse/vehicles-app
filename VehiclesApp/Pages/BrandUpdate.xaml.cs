@@ -6,4 +6,9 @@ public partial class BrandUpdate : ContentPage
 	{
 		InitializeComponent();
 	}
+
+    private void btnClear_Clicked(object sender, EventArgs e)
+    {
+
+    }
 }

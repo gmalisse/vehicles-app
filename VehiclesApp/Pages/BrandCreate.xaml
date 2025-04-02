@@ -22,6 +22,7 @@
             </Grid.RowDefinitions>
 
             <Label 
+                x:Name="lblCreateBrand"
                 Text="INSERIR MARCA"
                 HorizontalOptions="Center" 
                 FontSize="Title"
@@ -30,7 +31,7 @@
             <Entry
                 x:Name="etrId"
                 Text="ID"
-                FontSize="Medium"
+                FontSize="Small"
                 IsEnabled="False"
                 BackgroundColor="LightGray"
                 Grid.Row="1"
@@ -39,7 +40,8 @@
             <Entry
                 x:Name="etrName"
                 Placeholder="Nome"
-                FontSize="Medium"
+                PlaceholderColor="LightGray"
+                FontSize="Small"
                 TextColor="Black"
                 BackgroundColor="White"
                 Grid.Row="1"
@@ -47,13 +49,33 @@
 
             <Editor 
                 x:Name="editorObs"
-                Placeholder="Observação" 
-                FontSize="Medium"
+                Placeholder="Observação"
+                PlaceholderColor="LightGray"
+                FontSize="Small"
                 TextColor="Black"
                 BackgroundColor="White"
                 HeightRequest="150"
                 Grid.Row="2"
                 Grid.ColumnSpan="2"/>
         </Grid>
+
+        <HorizontalStackLayout
+            Spacing="15"
+            HorizontalOptions="CenterAndExpand">
+            <Button
+                x:Name="btnClear"
+                Text="Limpar"
+                FontAttributes="Bold"
+                FontSize="Small"
+                Clicked="BtnClear"
+                HorizontalOptions="CenterAndExpand"/>
+
+            <Button
+                x:Name="btnAdd"
+                Text="Adicionar"
+                FontAttributes="Bold"
+                FontSize="Small"
+                HorizontalOptions="CenterAndExpand"/>
+        </HorizontalStackLayout>
     </VerticalStackLayout>
 </ContentPage>
