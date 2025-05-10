@@ -11,10 +11,10 @@ namespace VehiclesApp.Models
     {
         [PrimaryKey, AutoIncrement]
         public int Id { get; set; }
-        public required string Name { get; set; }
-        public required int ManufacturingDate { get; set; }
-        public required int ModelDate { get; set; }
-        public required string Brand { get; set; } // Posteriormente puxar da tabela das marcas como lista suspensa
+        public string Name { get; set; }
+        public int ManufacturingDate { get; set; }
+        public int ModelDate { get; set; }
+        public string Brand { get; set; } // Posteriormente puxar da tabela das marcas como lista suspensa
         public string? Observation { get; set; }
     }
 }
