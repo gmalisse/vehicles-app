@@ -41,55 +41,26 @@
 
             <Label
             x:Name="lblName"
-            Text="Desenvolvido por: Gustavo Rocha Malisse"
-            HorizontalOptions="Center"/>
-
-            <Label
-            x:Name="lblObj"
-            Text="Futuro desenvolvedor Backend"
-            HorizontalOptions="Center"/>
+            Text="Desenvolvido por: Gustavo Rocha Malisse"/>
 
             <Label
             x:Name="lblRa"
             Text="RA: 2401852"/>
-
+            
             <Label 
-            x:Name="lblCourse"
-            Text="Curso: Ciência da Computação"/>
-
-            <Label 
-            x:Name="lblSemester"
-            Text="Período: 3 / Noturno"/>
+            x:Name="lblDataAv"
+            Text="Avaliação: 02/04/2025"/>
 
             <Label 
             x:Name="lblDiscipline"
             Text="Disciplina: Desenvolvimento Mobile Android"/>
 
-            <BoxView 
-            HeightRequest="1" 
-            BackgroundColor="Gray"/>
-
-            <Label
-            x:Name="lblContato"
-            Text="CONTATO:"
-            HorizontalOptions="Center"
-            FontSize="Medium"/>
-
-            <HorizontalStackLayout
-            HorizontalOptions="Center"
-            Spacing="-15">
-                <ImageButton
-                x:Name="imgLinkedin"
-                Source="linkedin.png"
-                Clicked="btnRedirecionarLinkedin"
-                HeightRequest="50"/>
-
-                <ImageButton
-                x:Name="imgGithub"
-                Source="github.png"
-                Clicked="btnRedirecionarGithub"
-                HeightRequest="50"/>
-            </HorizontalStackLayout>
+            <Button
+                x:Name="btnMenu"
+                Text="HOME"
+                FontSize="Medium"
+                FontAttributes="Bold"
+                HorizontalOptions="Center"/>
 
         </VerticalStackLayout>
 

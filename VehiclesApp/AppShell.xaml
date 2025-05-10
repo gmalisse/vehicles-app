@@ -4,28 +4,63 @@
     xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
     xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
     xmlns:pages="clr-namespace:VehiclesApp.Pages"
+    Shell.FlyoutBehavior="Flyout"
+    Shell.FlyoutBackground="MediumPurple"
     Title="VehiclesApp">
 
-    <TabBar>
-        <Tab Title="Home"
-             Icon="home.png">
-            <ShellContent ContentTemplate="{DataTemplate pages:MainPage}"/>
-        </Tab>
-        <Tab Title="Marcas"
-             Icon="marcas.png">
-            <ShellContent ContentTemplate="{DataTemplate pages:BrandMain}"/>
-        </Tab>
-        <Tab Title="Veículos"
-             Icon="veiculos.png">
-            <ShellContent ContentTemplate="{DataTemplate pages:VehicleMain}"/>
-        </Tab>
-        <Tab Title="Modelos"
-            Icon="modelos.png">
-            <ShellContent ContentTemplate="{DataTemplate pages:ModelMain}"/>
-        </Tab>
-        <Tab Title="Sobre"
-             Icon="sobre.png">
-            <ShellContent ContentTemplate="{DataTemplate pages:About}"/>
-        </Tab>
-    </TabBar>
+    <Shell.FlyoutHeader>
+        <VerticalStackLayout>
+            <Label 
+                Padding="20"
+                Text="VehicleApp" 
+                FontSize="30"
+                HorizontalTextAlignment="Center"/>
+        </VerticalStackLayout>
+    </Shell.FlyoutHeader>
+
+    <FlyoutItem Title="Menu"
+                FlyoutDisplayOptions="AsMultipleItems">
+
+        <ShellContent 
+            Title="Home"
+            Icon="home.png"
+            ContentTemplate="{DataTemplate pages:MainPage}"
+            Route="MainPage"/>
+
+        <ShellContent 
+            Title="Marcas"
+            Icon="marcas.png"
+            ContentTemplate="{DataTemplate pages:BrandMain}"
+            Route="BrandMain"/>
+
+        <ShellContent 
+            Title="Veículos"
+            Icon="veiculos.png"
+            ContentTemplate="{DataTemplate pages:VehicleMain}"
+            Route="VehicleMain"/>
+
+        <ShellContent
+            Title="Modelos"
+            Icon="modelos.png"
+            ContentTemplate="{DataTemplate pages:ModelMain}"
+            Route="ModelMain"/>
+
+        <ShellContent 
+            Title="Sobre"
+            Icon="sobre.png"
+            ContentTemplate="{DataTemplate pages:About}"
+            Route="About"/>
+
+    </FlyoutItem>
+
+    <Shell.FlyoutFooter>
+        <VerticalStackLayout
+            BackgroundColor="Gray" Padding="10">
+            <Label Text="© 2025 Direitos Gustavo Malisse"
+                   FontSize="14"
+                   TextColor="White"
+                   HorizontalOptions="Center"/>
+        </VerticalStackLayout>
+    </Shell.FlyoutFooter>
+
 </Shell>
