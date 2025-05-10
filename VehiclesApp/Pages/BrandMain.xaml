@@ -3,62 +3,92 @@
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
              x:Class="VehiclesApp.Pages.BrandMain"
              Title="Marcas">
-    <VerticalStackLayout>
-        <Grid
-            Padding="30"
-            ColumnSpacing="10">
-            <Grid.RowDefinitions>
-                <RowDefinition Height="auto"/>
-            </Grid.RowDefinitions>
+
+    <Grid RowDefinitions="Auto, *">
+        <!-- 1ª linha altura automática, 2ª ocupa todo o resto -->
+
+        <!-- Barra de busca e botão de adicionar -->
+        <Grid Padding="30"
+              ColumnSpacing="10"
+              Grid.Row="0">
             <Grid.ColumnDefinitions>
                 <ColumnDefinition Width="*"/>
-                <ColumnDefinition Width="auto"/>
+                <ColumnDefinition Width="Auto"/>
             </Grid.ColumnDefinitions>
-            <Entry
-                x:Name="etrBuscar"
-                Placeholder="Buscar"
-                PlaceholderColor="LightGray"
-                FontSize="Small"
-                VerticalOptions="Center"
-                TextColor="Black"
-                BackgroundColor="White"
-                Grid.Row="0"
-                Grid.Column="0"/>
 
-            <Button
-                x:Name="btnAddBrand"
-                Text="+"
-                FontAttributes="Bold"
-                FontSize="Title"
-                HeightRequest="55"
-                WidthRequest="55"
-                CornerRadius="50"
-                Grid.Row="0"
-                Grid.Column="1"
-                Clicked="BtnAddBrand"/>
+            <Entry x:Name="etrBuscar"
+                   Placeholder="Buscar"
+                   PlaceholderColor="LightGray"
+                   TextChanged="txtSearch_TextChanged"
+                   FontSize="Small"
+                   VerticalOptions="Center"
+                   TextColor="Black"
+                   BackgroundColor="White"
+                   Grid.Column="0"/>
+
+            <Button x:Name="btnAddBrand"
+                    Text="+"
+                    FontAttributes="Bold"
+                    FontSize="Title"
+                    HeightRequest="55"
+                    WidthRequest="55"
+                    CornerRadius="50"
+                    Grid.Column="1"
+                    Clicked="BtnAddBrand"/>
         </Grid>
 
-        <HorizontalStackLayout
-            Padding="25"
-            Spacing="30"
-            HorizontalOptions="Center"
-            BackgroundColor="Gray">
-            <Label
-                x:Name="lblTeste"
-                Text="Item 1"
-                VerticalOptions="Center"/>
+        <!-- Lista de marcas -->
+        <ListView x:Name="listBrands"
+                  Margin="20"
+                  HasUnevenRows="True"
+                  Grid.Row="1">
+            <!-- Ocupa o espaço todo abaixo da barra de busca -->
 
-            <ImageButton
-                x:Name="imgPencil"
-                Source="pencil.png"
-                Clicked="BtnUpdateBrand"
-                HeightRequest="35"/>
+            <ListView.Header>
+                <Grid ColumnDefinitions="55, *, 30, 30"
+                      BackgroundColor="MediumPurple"
+                      HeightRequest="40">
+                    <Label Grid.Column="0" 
+                           Text="Id" 
+                           Padding="10"
+                           TextColor="Black" 
+                           FontAttributes="Bold" 
+                           FontSize="Header" 
+                           VerticalOptions="Center"/>
+                    <Label Grid.Column="1" 
+                           Text="Nome" 
+                           Padding="10"
+                           TextColor="Black" 
+                           FontAttributes="Bold" 
+                           FontSize="Header" 
+                           VerticalOptions="Center"/>
+                </Grid>
+            </ListView.Header>
 
-            <ImageButton
-                x:Name="imgTrash"
-                Source="trash.png"
-                Clicked="BtnDeleteBrand"
-                HeightRequest="35"/>
-        </HorizontalStackLayout>
-    </VerticalStackLayout>
+            <ListView.ItemTemplate>
+                <DataTemplate>
+                    <ViewCell>
+                        <Grid ColumnDefinitions="30, *, 30, 30"
+                              Padding="10"
+                              ColumnSpacing="30">
+                            <Label Grid.Column="0"
+                                   VerticalOptions="Center"
+                                   Text="{Binding Id}" />
+                            <Label Grid.Column="1"
+                                   VerticalOptions="Center"
+                                   Text="{Binding Name}" />
+                            <ImageButton Grid.Column="2"
+                                         Source="pencil.png"
+                                         Clicked="BtnUpdateBrand"
+                                         HeightRequest="25" />
+                            <ImageButton Grid.Column="3"
+                                         Source="trash.png"
+                                         Clicked="BtnDeleteBrand"
+                                         HeightRequest="25" />
+                        </Grid>
+                    </ViewCell>
+                </DataTemplate>
+            </ListView.ItemTemplate>
+        </ListView>
+    </Grid>
 </ContentPage>

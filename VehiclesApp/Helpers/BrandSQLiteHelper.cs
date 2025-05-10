@@ -9,7 +9,7 @@ using VehiclesApp.Models;
 
 namespace VehiclesApp.Helpers
 {
-    class BrandSQLiteHelper
+    public class BrandSQLiteHelper
     {
         readonly SQLiteAsyncConnection _connection;
 
@@ -26,13 +26,13 @@ namespace VehiclesApp.Helpers
 
         public Task<List<Brand>> Update(Brand brand)
         {
-            string sql = "UPDATE Marca SET Codigo=?, Nome=? WHERE Id=?";
-            return _connection.QueryAsync<Brand>(sql, brand.Id, brand.Name);
+            string sql = "UPDATE Brand SET Observation=?, Name=? WHERE Id=?";
+            return _connection.QueryAsync<Brand>(sql, brand.Observation, brand.Name, brand.Id);
         }
 
         public Task<List<Brand>> Delete(int Id)
         {
-            string sql = "DELETE Marca WHERE Id=?";
+            string sql = "DELETE FROM Brand WHERE Id=?";
             return _connection.QueryAsync<Brand>(sql, Id);
         }
 
@@ -43,7 +43,7 @@ namespace VehiclesApp.Helpers
 
         public Task<List<Brand>> Search(string m)
         {
-            string sql = "SELECT * FROM Marca WHERE Nome LIKE '%" + m + "%'";
+            string sql = "SELECT * FROM Brand WHERE Name LIKE '%" + m + "%'";
             return _connection.QueryAsync<Brand>(sql, m);
         }
     }
