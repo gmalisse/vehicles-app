@@ -5,9 +5,7 @@
              Title="Marcas">
 
     <Grid RowDefinitions="Auto, *">
-        <!-- 1ª linha altura automática, 2ª ocupa todo o resto -->
 
-        <!-- Barra de busca e botão de adicionar -->
         <Grid Padding="30"
               ColumnSpacing="10"
               Grid.Row="0">
@@ -37,12 +35,10 @@
                     Clicked="BtnAddBrand"/>
         </Grid>
 
-        <!-- Lista de marcas -->
         <ListView x:Name="listBrands"
                   Margin="20"
                   HasUnevenRows="True"
                   Grid.Row="1">
-            <!-- Ocupa o espaço todo abaixo da barra de busca -->
 
             <ListView.Header>
                 <Grid ColumnDefinitions="55, *, 30, 30"

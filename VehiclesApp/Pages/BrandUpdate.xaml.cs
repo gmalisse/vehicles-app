@@ -22,7 +22,7 @@ public partial class BrandUpdate : ContentPage
         _brand.Name = etrName.Text;
         _brand.Observation = editorObs.Text;
 
-        await App.Db.Update(_brand);
+        await App.BrandDb.Update(_brand);
         await Navigation.PopAsync(); 
     }
 

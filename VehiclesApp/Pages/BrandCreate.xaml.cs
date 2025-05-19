@@ -22,7 +22,7 @@ public partial class BrandCreate : ContentPage
                 Observation = editorObs.Text
             };
 
-            await App.Db.Insert(marca);
+            await App.BrandDb.Insert(marca);
             await DisplayAlert("Sucesso!", "Registro inserido", "OK");          
         }
         catch (Exception ex)
@@ -30,6 +30,7 @@ public partial class BrandCreate : ContentPage
             await DisplayAlert("Ops...", ex.Message, "OK");
         }
     }
+
     public void BtnClear(object sender, EventArgs e)
 	{
 		etrName.Text = "";

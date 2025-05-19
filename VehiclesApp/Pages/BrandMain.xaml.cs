@@ -18,7 +18,7 @@ public partial class BrandMain : ContentPage
     {
         base.OnAppearing();
         list.Clear();
-        List<Brand> tmp = await App.Db.GetAll();
+        List<Brand> tmp = await App.BrandDb.GetAll();
 
         foreach (Brand item in tmp)
         {
@@ -31,7 +31,7 @@ public partial class BrandMain : ContentPage
 
         list.Clear();
 
-        List<Brand> tmp = await App.Db.Search(q);
+        List<Brand> tmp = await App.BrandDb.Search(q);
 
         foreach (Brand item in tmp)
         {
@@ -69,7 +69,7 @@ public partial class BrandMain : ContentPage
 
             if (confirm)
             {
-                await App.Db.Delete(selectedBrand.Id); 
+                await App.BrandDb.Delete(selectedBrand.Id); 
                 list.Remove(selectedBrand); 
             }
         }

@@ -3,63 +3,87 @@
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
              x:Class="VehiclesApp.Pages.ModelMain"
              Title="Modelos">
-    <VerticalStackLayout>
-        <Grid
-            Padding="30"
-            ColumnSpacing="10">
-            <Grid.RowDefinitions>
-                <RowDefinition Height="auto"/>
-            </Grid.RowDefinitions>
+    <Grid RowDefinitions="Auto, *">
+
+        <Grid Padding="30"
+          ColumnSpacing="10"
+          Grid.Row="0">
             <Grid.ColumnDefinitions>
                 <ColumnDefinition Width="*"/>
-                <ColumnDefinition Width="auto"/>
+                <ColumnDefinition Width="Auto"/>
             </Grid.ColumnDefinitions>
-        
-            <Entry
-                x:Name="etrBuscar"
-                Placeholder="Buscar"
-                PlaceholderColor="LightGray"
-                FontSize="Small"
-                VerticalOptions="Center"
-                TextColor="Black"
-                BackgroundColor="White"
-                Grid.Row="0"
-                Grid.Column="0"/>
 
-            <Button
-                x:Name="btnAdd"
+            <Entry x:Name="etrBuscar"
+               Placeholder="Buscar"
+               PlaceholderColor="LightGray"
+               TextChanged="txtSearch_TextChanged"
+               FontSize="Small"
+               VerticalOptions="Center"
+               TextColor="Black"
+               BackgroundColor="White"
+               Grid.Column="0"/>
+
+            <Button x:Name="btnAddModel"
                 Text="+"
                 FontAttributes="Bold"
                 FontSize="Title"
                 HeightRequest="55"
                 WidthRequest="55"
                 CornerRadius="50"
-                Clicked="BtnAddModel"
-                Grid.Row="0"
-                Grid.Column="1"/>
+                Grid.Column="1"
+                Clicked="BtnAddModel"/>
         </Grid>
-        <HorizontalStackLayout
-            Padding="25"
-            Spacing="30"
-            HorizontalOptions="Center"
-            BackgroundColor="Gray">
-        
-            <Label
-                x:Name="lblTeste"
-                Text="Item 1"
-                VerticalOptions="Center"/>
 
-            <ImageButton
-                x:Name="imgPencil"
-                Source="pencil.png"
-                Clicked="BtnUpdateModel"
-                HeightRequest="35"/>
+        <ListView x:Name="listModels"
+              Margin="20"
+              HasUnevenRows="True"
+              Grid.Row="1">
 
-            <ImageButton
-                x:Name="imgTrash"
-                Source="trash.png"
-                Clicked="BtnDeleteModel"
-                HeightRequest="35"/>
-        </HorizontalStackLayout>
-    </VerticalStackLayout>
+            <ListView.Header>
+                <Grid ColumnDefinitions="55, *, 30, 30"
+                  BackgroundColor="MediumPurple"
+                  HeightRequest="40">
+                    <Label Grid.Column="0" 
+                       Text="Id" 
+                       Padding="10"
+                       TextColor="Black" 
+                       FontAttributes="Bold" 
+                       FontSize="Header" 
+                       VerticalOptions="Center"/>
+                    <Label Grid.Column="1" 
+                       Text="Nome" 
+                       Padding="10"
+                       TextColor="Black" 
+                       FontAttributes="Bold" 
+                       FontSize="Header" 
+                       VerticalOptions="Center"/>
+                </Grid>
+            </ListView.Header>
+
+            <ListView.ItemTemplate>
+                <DataTemplate>
+                    <ViewCell>
+                        <Grid ColumnDefinitions="30, *, 30, 30"
+                          Padding="10"
+                          ColumnSpacing="30">
+                            <Label Grid.Column="0"
+                               VerticalOptions="Center"
+                               Text="{Binding Id}" />
+                            <Label Grid.Column="1"
+                               VerticalOptions="Center"
+                               Text="{Binding Name}" />
+                            <ImageButton Grid.Column="2"
+                                     Source="pencil.png"
+                                     Clicked="BtnUpdateModel"
+                                     HeightRequest="25" />
+                            <ImageButton Grid.Column="3"
+                                     Source="trash.png"
+                                     Clicked="BtnDeleteModel"
+                                     HeightRequest="25" />
+                        </Grid>
+                    </ViewCell>
+                </DataTemplate>
+            </ListView.ItemTemplate>
+        </ListView>
+    </Grid>
 </ContentPage>
