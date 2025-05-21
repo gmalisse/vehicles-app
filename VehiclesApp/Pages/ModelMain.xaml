@@ -40,18 +40,18 @@
               Grid.Row="1">
 
             <ListView.Header>
-                <Grid ColumnDefinitions="55, *, 30, 30"
+                <Grid ColumnDefinitions="105, *, 25, 25"
                   BackgroundColor="MediumPurple"
                   HeightRequest="40">
                     <Label Grid.Column="0" 
-                       Text="Id" 
+                       Text="Nome" 
                        Padding="10"
                        TextColor="Black" 
                        FontAttributes="Bold" 
                        FontSize="Header" 
                        VerticalOptions="Center"/>
                     <Label Grid.Column="1" 
-                       Text="Nome" 
+                       Text="Observação" 
                        Padding="10"
                        TextColor="Black" 
                        FontAttributes="Bold" 
@@ -63,15 +63,15 @@
             <ListView.ItemTemplate>
                 <DataTemplate>
                     <ViewCell>
-                        <Grid ColumnDefinitions="30, *, 30, 30"
+                        <Grid ColumnDefinitions="80, *, 25, 25"
                           Padding="10"
                           ColumnSpacing="30">
                             <Label Grid.Column="0"
                                VerticalOptions="Center"
-                               Text="{Binding Id}" />
+                               Text="{Binding Name}" />
                             <Label Grid.Column="1"
                                VerticalOptions="Center"
-                               Text="{Binding Name}" />
+                               Text="{Binding Observation}" />
                             <ImageButton Grid.Column="2"
                                      Source="pencil.png"
                                      Clicked="BtnUpdateModel"

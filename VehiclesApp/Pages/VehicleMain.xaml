@@ -40,18 +40,25 @@
               Grid.Row="1">
 
             <ListView.Header>
-                <Grid ColumnDefinitions="55, *, 30, 30"
+                <Grid ColumnDefinitions="60, 65, 100, *, *"
                   BackgroundColor="MediumPurple"
                   HeightRequest="40">
                     <Label Grid.Column="0" 
-                       Text="Id" 
+                       Text="Nome" 
                        Padding="10"
                        TextColor="Black" 
                        FontAttributes="Bold" 
                        FontSize="Header" 
                        VerticalOptions="Center"/>
                     <Label Grid.Column="1" 
-                       Text="Nome" 
+                       Text="Ano" 
+                       Padding="10"
+                       TextColor="Black" 
+                       FontAttributes="Bold" 
+                       FontSize="Header" 
+                       VerticalOptions="Center"/>
+                    <Label Grid.Column="2" 
+                       Text="Marca" 
                        Padding="10"
                        TextColor="Black" 
                        FontAttributes="Bold" 
@@ -63,20 +70,23 @@
             <ListView.ItemTemplate>
                 <DataTemplate>
                     <ViewCell>
-                        <Grid ColumnDefinitions="30, *, 30, 30"
+                        <Grid ColumnDefinitions="30, 40, 90, *, *"
                           Padding="10"
                           ColumnSpacing="30">
                             <Label Grid.Column="0"
                                VerticalOptions="Center"
-                               Text="{Binding Id}" />
+                               Text="{Binding Name}" />
                             <Label Grid.Column="1"
                                VerticalOptions="Center"
-                               Text="{Binding Name}" />
-                            <ImageButton Grid.Column="2"
+                               Text="{Binding ModelDate}" />
+                            <Label Grid.Column="2"
+                               VerticalOptions="Center"
+                               Text="{Binding Brand}" />
+                            <ImageButton Grid.Column="3"
                                      Source="pencil.png"
                                      Clicked="BtnUpdateVehicle"
                                      HeightRequest="25" />
-                            <ImageButton Grid.Column="3"
+                            <ImageButton Grid.Column="4"
                                      Source="trash.png"
                                      Clicked="BtnDeleteVehicle"
                                      HeightRequest="25" />
