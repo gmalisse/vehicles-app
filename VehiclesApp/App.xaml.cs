@@ -6,6 +6,7 @@ namespace VehiclesApp
     {
         static BrandSQLiteHelper _brandDb;
         static ModelSQLiteHelper _modelDb;
+        static VehicleSQLiteHelper _vehicleDb;
 
         public static BrandSQLiteHelper BrandDb
         {
@@ -40,6 +41,24 @@ namespace VehiclesApp
                 }
 
                 return _modelDb;
+            }
+        }
+
+        public static VehicleSQLiteHelper VehicleDb
+        {
+            get
+            {
+                if (_vehicleDb == null)
+                {
+                    string path = Path.Combine(
+                        Environment.GetFolderPath(
+                            Environment.SpecialFolder.LocalApplicationData),
+                        "vehicleapp_db.db3");
+
+                    _vehicleDb = new VehicleSQLiteHelper(path);
+                }
+
+                return _vehicleDb;
             }
         }
 

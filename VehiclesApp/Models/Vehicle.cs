@@ -7,7 +7,7 @@ using SQLite;
 
 namespace VehiclesApp.Models
 {
-    class Vehicle
+    public class Vehicle
     {
         [PrimaryKey, AutoIncrement]
         public int Id { get; set; }

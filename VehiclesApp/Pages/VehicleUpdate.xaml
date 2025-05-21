@@ -127,6 +127,7 @@ Spacing="30">
                 Text="Adicionar"
                 FontAttributes="Bold"
                 FontSize="Small"
+                Clicked="BtnUpdateClicked"
                 HorizontalOptions="CenterAndExpand"/>
         </HorizontalStackLayout>
     </VerticalStackLayout>
