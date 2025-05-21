@@ -124,7 +124,7 @@ Spacing="30">
 
             <Button
                 x:Name="btnAdd"
-                Text="Adicionar"
+                Text="Atualizar"
                 FontAttributes="Bold"
                 FontSize="Small"
                 Clicked="BtnUpdateClicked"
