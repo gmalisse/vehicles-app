@@ -8,10 +8,10 @@ Este projeto foi desenvolvido como parte dos meus estudos em desenvolvimento mob
 
 ## 📱 Funcionalidades
 
-- 📋 Cadastro de marcas, modelos, veículos.
-- 🔍 Pesquisa de registros.
-- ✏️ Edição e exclusão de registros
-- 💾 Armazenamento local (SQLite)
+- Cadastro de marcas, modelos, veículos.
+- Pesquisa de registros.
+- Edição e exclusão de registros
+- Armazenamento local (SQLite)
 
 <p align="center">
   <img src="VehiclesApp/Resources/Images/gif-app.gif" alt="Funcionalidades"/>
