@@ -2,6 +2,7 @@
 
 Aplicativo mobile para gerenciamento de estoque de veículos, desenvolvido com **.NET MAUI**. Permite cadastrar, editar, listar e pesquisar veículos de forma prática, com persistência de dados local.
 Este projeto foi desenvolvido como parte dos meus estudos em desenvolvimento mobile, com foco em aplicações reais usando C# e .NET.
+![Modelo Relacional](VehiclesApp/Resources/Images/modelo-relacional.png)
 
 ---
 
@@ -11,6 +12,8 @@ Este projeto foi desenvolvido como parte dos meus estudos em desenvolvimento mob
 - 🔍 Pesquisa de registros.
 - ✏️ Edição e exclusão de registros
 - 💾 Armazenamento local (SQLite)
+  
+![Funcionalidades](VehiclesApp/Resources/Images/gif-app.gif)
 
 ---
 
