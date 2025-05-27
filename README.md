@@ -12,8 +12,10 @@ Este projeto foi desenvolvido como parte dos meus estudos em desenvolvimento mob
 - 🔍 Pesquisa de registros.
 - ✏️ Edição e exclusão de registros
 - 💾 Armazenamento local (SQLite)
-  
-![Funcionalidades](VehiclesApp/Resources/Images/gif-app.gif)
+
+<p align="center">
+  <img src="VehiclesApp/Resources/Images/gif-app.gif" alt="Funcionalidades"/>
+</p>
 
 ---
 
