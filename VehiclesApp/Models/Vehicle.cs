@@ -14,7 +14,8 @@ namespace VehiclesApp.Models
         public string Name { get; set; }
         public int ManufacturingDate { get; set; }
         public int ModelDate { get; set; }
-        public string Brand { get; set; } // Posteriormente puxar da tabela das marcas como lista suspensa
+        public int BrandId { get; set; }
+        public string BrandName { get; set; }
         public string? Observation { get; set; }
     }
 }

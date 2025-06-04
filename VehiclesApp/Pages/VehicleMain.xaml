@@ -81,7 +81,7 @@
                                Text="{Binding ModelDate}" />
                             <Label Grid.Column="2"
                                VerticalOptions="Center"
-                               Text="{Binding Brand}" />
+                               Text="{Binding BrandName}" />
                             <ImageButton Grid.Column="3"
                                      Source="pencil.png"
                                      Clicked="BtnUpdateVehicle"

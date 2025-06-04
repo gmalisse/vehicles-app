@@ -59,6 +59,17 @@ Spacing="30">
                 Grid.Column="0"
                 Grid.Row="2">
                 <Picker.Items>
+                    <x:String>2010</x:String>
+                    <x:String>2011</x:String>
+                    <x:String>2012</x:String>
+                    <x:String>2013</x:String>
+                    <x:String>2014</x:String>
+                    <x:String>2015</x:String>
+                    <x:String>2016</x:String>
+                    <x:String>2017</x:String>
+                    <x:String>2018</x:String>
+                    <x:String>2019</x:String>
+                    <x:String>2020</x:String>
                     <x:String>2022</x:String>
                     <x:String>2023</x:String>
                     <x:String>2024</x:String>
@@ -76,6 +87,18 @@ Spacing="30">
                 Grid.Column="1"
                 Grid.Row="2">
                 <Picker.Items>
+                    <x:String>2010</x:String>
+                    <x:String>2011</x:String>
+                    <x:String>2012</x:String>
+                    <x:String>2013</x:String>
+                    <x:String>2014</x:String>
+                    <x:String>2015</x:String>
+                    <x:String>2016</x:String>
+                    <x:String>2017</x:String>
+                    <x:String>2018</x:String>
+                    <x:String>2019</x:String>
+                    <x:String>2020</x:String>
+                    <x:String>2021</x:String>
                     <x:String>2022</x:String>
                     <x:String>2023</x:String>
                     <x:String>2024</x:String>
@@ -84,19 +107,13 @@ Spacing="30">
             </Picker>
 
             <Picker
-                x:Name="etrBrand"
+                x:Name="picBrand"
                 FontSize="Small"
                 TextColor="Black"
                 BackgroundColor="White"
                 Title="Marca"
                 Grid.ColumnSpan="2"
                 Grid.Row="3">
-                <Picker.Items>
-                    <x:String>Ford</x:String>
-                    <x:String>Fiat</x:String>
-                    <x:String>Chevrolet</x:String>
-                    <x:String>BYD</x:String>
-                </Picker.Items>
             </Picker>
 
             <Editor 

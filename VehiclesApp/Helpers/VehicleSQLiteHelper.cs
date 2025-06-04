@@ -25,8 +25,8 @@ namespace VehiclesApp.Helpers
 
         public Task<List<Vehicle>> Update(Vehicle vehicle)
         {
-            string sql = "UPDATE Vehicle SET Observation=?, Name=? WHERE Id=?";
-            return _connection.QueryAsync<Vehicle>(sql, vehicle.Observation, vehicle.Name, vehicle.Id);
+            string sql = "UPDATE Vehicle SET Observation=?, Name=?, BrandId=? WHERE Id=?";
+            return _connection.QueryAsync<Vehicle>(sql, vehicle.Observation, vehicle.Name, vehicle.BrandId, vehicle.Id);
         }
 
         public Task<List<Vehicle>> Delete(int Id)
@@ -38,6 +38,20 @@ namespace VehiclesApp.Helpers
         public Task<List<Vehicle>> GetAll()
         {
             return _connection.Table<Vehicle>().ToListAsync();
+        }
+
+        public async Task<List<Vehicle>> GetAllWithBrandName()
+        {
+            var vehicles = await GetAll();
+            var brands = await App.BrandDb.GetAll();
+
+            foreach (var v in vehicles)
+            {
+                var brand = brands.FirstOrDefault(b => b.Id == v.BrandId);
+                v.BrandName = brand?.Name ?? "Desconhecida";
+            }
+
+            return vehicles;
         }
 
         public Task<List<Vehicle>> Search(string m)

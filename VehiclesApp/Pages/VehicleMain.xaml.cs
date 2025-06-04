@@ -17,7 +17,7 @@ public partial class VehicleMain : ContentPage
     {
         base.OnAppearing();
         list.Clear();
-        List<Vehicle> tmp = await App.VehicleDb.GetAll();
+        List<Vehicle> tmp = await App.VehicleDb.GetAllWithBrandName();
 
         foreach (Vehicle item in tmp)
         {
